@@ -11,7 +11,7 @@ $ mix deps.compile
 ### Run It
 Once you've got all the dependencies pulled, start it up within `iex` so you can add a few counts to some fictitious commands
 ```sh
-iex -S mix run
+$ iex -S mix run
 ```
 Now that you're within `iex`, you can add some command counts. Try the following
 ```elixir

@@ -39,7 +39,7 @@ basic_command_total{command="TWO"} 2
 Obviously this is a very small project, and it's meant to be the smallest possible working example I could think to do. So, if you're just trying to get to the one place where all the action is, you'll want to look at `lib/basic/metrics/command_instrumenter.ex`. Everything interesting is happening there.
 
 ### Prometheus
-To see how metrics are actually pulled into Prometheus, you'll first need to install it and configure it. For more information on installation and configuration, check out the [Prometheus Documentation](https://prometheus.io/docs/introduction/first_steps/). To add the app's endopoint to Prometheus, you'll want to add the following configuration to the `prometheus.yml` file under the `scrape_configs:` element within that file. Again, you'll want to check the documentation to figure out where this file is located for your installation.
+To see how metrics are actually pulled into Prometheus, you'll first need to install it and configure it. For more information on installation and configuration, check out the [Prometheus Documentation](https://prometheus.io/docs/introduction/first_steps/). To add the app's endpoint to Prometheus, you'll want to add the following configuration to the `prometheus.yml` file under the `scrape_configs:` element within that file. Again, you'll want to check the documentation to figure out where this file is located for your installation.
 ```yml
 scrape_configs:
   - job_name: "basic"

@@ -25,11 +25,11 @@ defmodule Basic.Metrics.CommandInstrumenter do
 
     # Events to handle
     events = [
-      [:basic, :command],
+      [:basic, :command]
     ]
 
     # Attach defined events to a telemetry callback
-    :telemetry.attach_many("basic-commands", events, &handle_event/4, nil)
+    :telemetry.attach_many("basic-commands", events, &__MODULE__.handle_event/4, nil)
   end
 
   @doc """

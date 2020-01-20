@@ -9,6 +9,9 @@ defmodule Basic.Metrics.CommandInstrumenter do
 
   use Prometheus.Metric
 
+  # Prometheus counter metric
+  @counter name: :basic_command_total, help: "Command Count", labels: [:command]
+
   @doc """
   Initial event instrumentation setup. This setup should happen during the
   initial startup of the application.
@@ -16,13 +19,6 @@ defmodule Basic.Metrics.CommandInstrumenter do
   Returns `:ok | {:error, :already_exists}`
   """
   def setup() do
-    # Prometheus counter metric
-    Counter.declare(
-      name: :basic_command_total,
-      help: "Command Count",
-      labels: [:command]
-    )
-
     # Events to handle
     events = [
       [:basic, :command]

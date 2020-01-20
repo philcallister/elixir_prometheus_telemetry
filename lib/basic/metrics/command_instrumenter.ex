@@ -46,7 +46,7 @@ defmodule Basic.Metrics.CommandInstrumenter do
       :ok
 
   """
-  def handle_event([:basic, :command], _count, _metadata = %{command: command}, _config) do
+  def handle_event([:basic, :command], _measurement, _metadata = %{command: command}, _config) do
     Counter.inc(name: :basic_command_total, labels: [command])
   end
 
